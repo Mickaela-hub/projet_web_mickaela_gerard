@@ -1,0 +1,147 @@
+.billetterie-page {
+    padding: 80px 5%;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.billetterie-page h1 {
+    font-size: 3rem;
+    font-family: serif;
+    color: #f5f1e6;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #f5f1e6;
+    opacity: 0.8;
+    margin-bottom: 50px;
+}
+
+.tickets-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* CARTE DE BASE */
+.ticket-card {
+    background: #fff;
+    color: #333;
+    padding: 40px 30px;
+    width: 320px;
+    border-radius: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+}
+
+.ticket-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* ÉLÉMENTS INTERNES */
+.ticket-card h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.price {
+    font-size: 3.5rem;
+    font-family: serif;
+    color: #d4af37;
+    margin: 20px 0;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.features li.not-included {
+    color: #aaa;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+
+/* PASS PREMIUM (Mise en avant) */
+.featured {
+    border: 2px solid #d4af37;
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d4af37;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* PASS VIP (Luxe) */
+.vip {
+    background: #2c2c2c;
+    color: #f5f1e6;
+    border: 2px solid #d4af37;
+}
+
+.vip .price { color: #d4af37; }
+.vip .features li { border-bottom: 1px solid #444; }
+
+.badge-limit {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e74c3c; /* Rouge pour l'urgence */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: max-content;
+}
+
+/* BOUTONS */
+.buy-btn {
+    background: #2c2c2c;
+    color: #f5f1e6;
+    border: none;
+    padding: 15px 30px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.buy-btn:hover {
+    background: #d4af37;
+    color: white;
+}
+
+.buy-btn.gold {
+    background: #d4af37;
+    color: #2c2c2c;
+}
+
+.buy-btn.gold:hover {
+    background: #f5f1e6;
+}

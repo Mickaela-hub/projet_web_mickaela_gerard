@@ -1,0 +1,86 @@
+.musee-intro {
+    padding: 100px 10% 50px;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/img/musee_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #f5f1e6;
+}
+
+.musee-intro h1 {
+    font-family: serif;
+    font-size: 3.5rem;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.intro-container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.musee-gallery {
+    padding: 80px 10%;
+    background-color: #fdfbf7; /* Fond clair pour rappeler le papier ancien */
+    color: #333;
+}
+
+.treasure-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.treasure-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.treasure-item img {
+    width: 45%;
+    border-radius: 5px;
+    box-shadow: 15px 15px 0px #d4af37; /* Ombre dorée décalée pour un style "cadre" */
+    transition: 0.3s;
+}
+
+.treasure-item img:hover {
+    transform: scale(1.02);
+}
+
+.treasure-text {
+    width: 55%;
+}
+
+.treasure-text h3 {
+    font-family: serif;
+    font-size: 2rem;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d4af37;
+    display: inline-block;
+}
+
+.musee-exterieur {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #2c2c2c;
+    color: #f5f1e6;
+}
+
+.musee-exterieur h2 {
+    font-family: serif;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .treasure-item, .treasure-item.reverse {
+        flex-direction: column;
+    }
+    .treasure-item img, .treasure-text {
+        width: 100%;
+    }
+}

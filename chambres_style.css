@@ -1,0 +1,111 @@
+.chambres-page { 
+    padding: 80px 10%; 
+    background-color: rgb(228, 187, 127); /* Ton fond habituel */
+    color: white; /* Texte blanc sur fond crème */
+    min-height: 100vh;
+}
+
+.chambres-page h1 {
+    font-size: 3rem;
+    font-family: serif;
+    color: #f5f1e6; /* Crème clair pour le titre */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #f5f1e6;
+    opacity: 0.8;
+    margin-bottom: 60px;
+    font-size: 1.1rem;
+}
+
+/* Style de base d'une chambre */
+.chambre-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95); /* Fond blanc pour les détails */
+    margin-bottom: 60px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    color: #333; /* Texte sombre sur fond clair */
+    transition: transform 0.3s ease;
+}
+
+.chambre-item:hover {
+    transform: translateY(-10px);
+}
+
+.chambre-item img {
+    width: 50%;
+    height: 400px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Recadre l'image sans la déformer */
+}
+
+.chambre-info {
+    padding: 50px;
+    width: 50%;
+}
+
+.chambre-info h2 { 
+    font-family: serif; 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+    color: #d4af37; /* Titre doré */
+}
+
+.chambre-info p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.chambre-prix {
+    font-size: 1.4rem;
+    color: #2c2c2c;
+    margin-top: 25px;
+}
+
+/* Inverser l'ordre des éléments pour la présentation alternée */
+.chambre-item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Bouton de contact pour les chambres */
+.contact-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: #2c2c2c; /* Bouton noir */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 2px solid #2c2c2c;
+}
+
+.contact-btn:hover {
+    background-color: transparent;
+    color: #d4af37; /* Texte doré au survol */
+    border-color: #d4af37;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .chambre-item, .chambre-item.reverse {
+        flex-direction: column;
+    }
+    .chambre-item img, .chambre-info {
+        width: 100%;
+    }
+    .chambre-item img {
+        height: 300px; /* Ajustement pour les petits écrans */
+        border-radius: 20px 20px 0 0;
+    }
+    .chambre-info {
+        border-radius: 0 0 20px 20px;
+    }
+}
