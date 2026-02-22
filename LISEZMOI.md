@@ -9,15 +9,15 @@ Site pour un bal fictif.
 - **JS Interaction :** Alerte native au chargement (`index.html`).
 
 ## Structure
-- `index.html` : Accueil & Histoire.
-- `musee.html` : Galerie d'objets historiques.
-- `styles.css` : Design global & Accueil.
-- `musee_style.css` : Design spécifique au musée.
-- `assets/` : Images (IA) et icônes.
+- index.html : Accueil & Histoire.
+- musee.html : Galerie d'objets historiques.
+- styles.css : Design global & Accueil.
+- musee_style.css : Design spécifique au musée.
+- assets/ : Images (IA) plus site inspi, logo et icônes.
 
 ## Design
 - **Couleurs :** Or, crème et marron.
 - **Visuels :** Générés par IA pour une direction artistique cohérente ou pris sur la site inspiration.
 
 ## Déploiement
-Lien du site : 
+Lien du site : https://mickaela-hub.github.io/projet_web_mickaela_gerard/
