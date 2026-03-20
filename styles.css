@@ -155,11 +155,87 @@ footer {
 .contact-icons img:hover { transform: translateY(-5px); }
 
 /* ==========================================================================
-   6. RESPONSIVE
+   6. RESPONSIVE & BURGER MENU
    ========================================================================== */
-@media (max-width: 768px) {
-    .split-section { flex-direction: column; text-align: center; padding: 40px 5%; }
-    .nav ul { display: none; } 
-    .footer-container { flex-direction: column; gap: 40px; text-align: center; }
+
+/* Cacher la checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Style du bouton Hamburger (les 3 traits) */
+.hamburger {
+    display: none; /* Caché sur grand écran */
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+@media (max-width: 992px) {
+    .hamburger {
+        display: flex; /* Apparaît sur tablette/mobile */
+    }
+
+    /* Transformation du UL en menu latéral */
+    /* Transformation du UL en menu latéral plus étroit */
+    nav ul {
+        position: fixed;
+        right: -300px; /* On le cache un peu plus loin que sa largeur */
+        top: 0;
+        flex-direction: column;
+        background-color: rgba(180, 140, 90, 0.95); /* Ajout d'une légère transparence */
+        width: 250px; /* Largeur réduite et fixe */
+        height: 100vh;
+        padding-top: 100px;
+        transition: 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+        align-items: flex-start; /* Aligne les liens à gauche dans le menu */
+        padding-left: 30px;
+    }
+
+    /* Ajustement de la sortie du menu */
+    .menu-toggle:checked ~ ul {
+        right: 0;
+    }
+
+    /* Quand la checkbox est cochée, on affiche le menu */
+    .menu-toggle:checked ~ ul {
+        right: 0;
+    }
+
+    /* Animation du hamburger en "X" quand on clique */
+    .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Ajustements des autres sections */
+    .split-section { 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 40px 5%; 
+    }
+    
+    .image-side { order: -1; } /* Met l'image au-dessus du texte sur mobile */
+
+    .footer-container { 
+        flex-direction: column; 
+        gap: 40px; 
+        text-align: center; 
+    }
     .contact-icons { justify-content: center; }
 }

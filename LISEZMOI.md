@@ -17,7 +17,7 @@ Site pour un bal fictif.
 
 ## Design
 - **Couleurs :** Or, crème et marron.
-- **Visuels :** Générés par IA pour une direction artistique cohérente ou pris sur la site inspiration.
+- **Visuels :** Générés par IA pour une direction artistique cohérente ou pris sur le site inspiration.
 
 ## Déploiement
 Lien du site : https://mickaela-hub.github.io/projet_web_mickaela_gerard/
